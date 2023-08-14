@@ -33,7 +33,7 @@ En resumen, en el proceso blockchain de transferencia de dinero de Bob a Alice, 
 
 En base al ejemplo de transferencia de dinero de Bob a Alice, la blockchain actúa como un libro de contabilidad digital compartido entre múltiples participantes (nodos) en una red. Cada nodo tiene una copia completa y actualizada de todas las transacciones, y para que una nueva transacción sea considerada válida, debe ser verificada y consensuada por la mayoría de los nodos en la red. Esta descentralización y distribución de la información evita la necesidad de intermediarios y reduce el riesgo de manipulación o fraude, ya que cualquier intento de alteración sería detectado por la red.
 ### Características principales de blockchain
-![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/994b5103-5a07-4716-95b9-7ef6f5dd0f35)
+
 
 #### Descentralización 
 Característica que hace que la blockchain no dependa de una autoridad central o intermediario para validar las transacciones o mantener el registro. Esto es muy importante porque elimina el riesgo de censura, control, monopolio y abuso de poder. Además, permite crear una red más democrática, participativa y colaborativa, donde todos los nodos tienen el mismo peso e importancia .
@@ -41,4 +41,6 @@ Característica que hace que la blockchain no dependa de una autoridad central o
 Permite que todos los participantes de la red puedan ver el historial completo de las transacciones y los datos almacenados en la blockchain, sin necesidad de permisos especiales o identidades. Esto es muy importante porque facilita la rendición de cuentas, el cumplimiento de normas, la confianza entre las partes y la resolución de conflictos. Además, permite crear una red más abierta, honesta y responsable, donde todos los actos tienen consecuencias. 
 #### Inmutabilidad 
 Garantiza que los datos registrados en la blockchain no pueden ser alterados ni borrados por nadie, ni siquiera por los propios creadores de la blockchain. Esto es muy importante porque evita el fraude, la corrupción, la manipulación y el error humano. Además, permite crear un registro histórico fiable y veraz de lo que ha ocurrido en la red.
+#### Interoperabilidad 
+Permite que diferentes ecosistemas de blockchain interactúen y se comuniquen sin problemas, lo que amplía la utilidad de blockchain al mejorar la funcionalidad y las posibles aplicaciones de estos sistemas.
 
