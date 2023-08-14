@@ -19,7 +19,7 @@ La Web 3.0 busca descentralizar la web y empoderar a los usuarios al permitirles
 
 Bob quiere transferir dinero a Alice. En el proceso tradicional, Bob necesita la ayuda de un intermediario, como un banco, para completar la transferencia. El banco actúa como árbitro y verifica si Bob tiene suficiente saldo y otros controles, luego facilita la transferencia de dinero a través de su sistema. 
 
-#### cómo funcionaría esto utilizando la tecnología blockchain:
+#### Cómo funcionaría utilizando tecnología blockchain:
 
 En lugar de depender de un banco, Bob y Alice pueden utilizar una blockchain, que es esencialmente una base de datos descentralizada y segura. En esta cadena de bloques, cada usuario tiene una copia de todas las transacciones, y estas transacciones están aseguradas mediante criptografía.
 
@@ -32,5 +32,13 @@ Cada bloque está vinculado al bloque anterior, formando una cadena continua de 
 En resumen, en el proceso blockchain de transferencia de dinero de Bob a Alice, la necesidad de un intermediario como un banco se elimina. La red descentralizada de nodos garantiza que las transacciones sean verificadas de manera transparente y segura, sin necesidad de confiar en una única entidad. Cada usuario de la blockchain es testigo y participante en la validación de las transacciones, lo que hace que la información sea inmutable y confiable.
 
 En base al ejemplo de transferencia de dinero de Bob a Alice, la blockchain actúa como un libro de contabilidad digital compartido entre múltiples participantes (nodos) en una red. Cada nodo tiene una copia completa y actualizada de todas las transacciones, y para que una nueva transacción sea considerada válida, debe ser verificada y consensuada por la mayoría de los nodos en la red. Esta descentralización y distribución de la información evita la necesidad de intermediarios y reduce el riesgo de manipulación o fraude, ya que cualquier intento de alteración sería detectado por la red.
+### Características principales de blockchain
+![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/994b5103-5a07-4716-95b9-7ef6f5dd0f35)
 
+#### Descentralización 
+Característica que hace que la blockchain no dependa de una autoridad central o intermediario para validar las transacciones o mantener el registro. Esto es muy importante porque elimina el riesgo de censura, control, monopolio y abuso de poder. Además, permite crear una red más democrática, participativa y colaborativa, donde todos los nodos tienen el mismo peso e importancia .
+#### Transparencia 
+Permite que todos los participantes de la red puedan ver el historial completo de las transacciones y los datos almacenados en la blockchain, sin necesidad de permisos especiales o identidades. Esto es muy importante porque facilita la rendición de cuentas, el cumplimiento de normas, la confianza entre las partes y la resolución de conflictos. Además, permite crear una red más abierta, honesta y responsable, donde todos los actos tienen consecuencias. 
+#### Inmutabilidad 
+Garantiza que los datos registrados en la blockchain no pueden ser alterados ni borrados por nadie, ni siquiera por los propios creadores de la blockchain. Esto es muy importante porque evita el fraude, la corrupción, la manipulación y el error humano. Además, permite crear un registro histórico fiable y veraz de lo que ha ocurrido en la red.
 
