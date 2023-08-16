@@ -208,7 +208,7 @@ contract MiPrimerContrato {
  ![Captura de pantalla 2023-08-15 100824](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/ac4d49bf-9bf6-4ede-8e94-35e6118262ef)
 
 
-Has creado y desplegado exitosamente tu primer smart contract utilizando Solidity en Remix. Ahora puedes explorar más sobre Solidity y la programación de contratos inteligentes. Recuerda que este tutorial es solo un punto de partida, y hay mucho más por aprender en el mundo de la tecnología blockchain.
+Has creado y desplegado exitosamente tu primer smart contract utilizando Solidity en Remix. Ahora puedes explorar más sobre Solidity y la programación de contratos inteligentes. 
 
 ### **Introducción a Solidity, Desarrollo de Contratos Simples**
 
