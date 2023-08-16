@@ -10,7 +10,8 @@ Web 3.0 es la evolución de Internet que busca crear una experiencia web más in
 
 **La Web 3.0** es la versión descentralizada de Internet, basada en tecnologías avanzadas como la blockchain y las criptomonedas. Su propósito es arrebatar el poder a las grandes tecnológicas y ponerlo en manos de personas reales. La Web 3.0 busca crear un internet más equitativo y dar control a los usuarios sobre sus propios datos. En resumen, el artículo explica las diferencias entre las tres versiones de la web, destacando las características y atributos de cada una de ellas.
 
-![image-20230815210001253](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815210001253.png)
+![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/509c42b4-31b0-4f47-859f-de46d1fb28ac)
+
 
 ### **¿Qué es blockchain y cómo se relaciona con la Web 3.0?**
 
@@ -20,7 +21,8 @@ La Web 3.0 busca descentralizar la web y empoderar a los usuarios al permitirles
 
 **Ejemplo**
 
-![image-20230815210028041](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815210028041.png)
+![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/262f33d3-1a13-45b5-8525-94b4eb5cfcb5)
+
 
 Imagina que Bob quiere transferir dinero a Alice. En el proceso tradicional, Bob necesita la ayuda de un intermediario, como un banco, para completar la transferencia. El banco actúa como árbitro y verifica si Bob tiene suficiente saldo y luego facilita la transferencia de dinero a través de su sistema. Sin embargo, este sistema tiene sus limitaciones, ya que el banco tiene el control total sobre la transacción y puede modificar la información.
 
@@ -40,7 +42,8 @@ En esencia, la blockchain proporciona un método confiable para registrar y veri
 
 ### **Características principales de blockchain**
 
-![image-20230815210806258](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815210806258.png) 
+![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/cf5763c1-2fcb-4a74-8016-4d4156bf0200)
+
 
 **Descentralización** es la característica que hace que la blockchain no dependa de una autoridad central o intermediario para validar las transacciones o mantener el registro. Esto es muy importante porque elimina el riesgo de censura, control, monopolio y abuso de poder. Además, permite crear una red más democrática, participativa y colaborativa, donde todos los nodos tienen el mismo peso e importancia.
 
@@ -52,7 +55,8 @@ En esencia, la blockchain proporciona un método confiable para registrar y veri
 
 #### **Protocolos** 
 
-![image-20230815211023007](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815211023007.png)
+![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/0399a542-f0b8-41e1-a324-9ed6f9379c3c)
+
 
 Los protocolos son diferentes formas de implementar la tecnología blockchain, que es un sistema de registro distribuido y seguro que permite crear y transferir valor sin intermediarios. Cada protocolo tiene sus propias características, ventajas y desafíos.
 
@@ -66,9 +70,10 @@ Los protocolos son diferentes formas de implementar la tecnología blockchain, q
 
 #### **Proyectos de Blockchain** 
 
-![image-20230815211048530](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815211048530.png)
+![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/c0bf0a7f-7af0-4c58-ae2d-00c31b10666c)
 
-**[Tru Market](https://www.youtube.com/watch?v=ZV7mifdd9Sc) **
+
+**[Tru Market](https://www.youtube.com/watch?v=ZV7mifdd9Sc)**
 
 Es un proyecto peruano que busca conectar a productores locales de frutas con mercados internacionales mediante el uso de blockchain, ofrece una plataforma que facilita la trazabilidad, la transparencia y la confianza en toda la cadena de suministro, desde el campo hasta el consumidor final. Tru Market también utiliza tokens para incentivar a los productores y a los compradores a participar en el ecosistema.
 
