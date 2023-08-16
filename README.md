@@ -194,7 +194,8 @@ contract MiPrimerContrato {
 
 - [ ] Confirma la transacción en Metamask.
 
-   ![](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815100421312.png)
+   ![Captura de pantalla 2023-08-15 100335](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/9e63f533-d2a8-4d89-9d19-defeb05ff8f8)
+
 
 ##### **6. Interactuando con el Smart Contract**
 
@@ -204,7 +205,8 @@ contract MiPrimerContrato {
 
 3. Utiliza la función `get` para recuperar el saludo almacenado.
 
-   ![image-20230815100840220](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815100840220.png)
+ ![Captura de pantalla 2023-08-15 100824](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/ac4d49bf-9bf6-4ede-8e94-35e6118262ef)
+
 
 Has creado y desplegado exitosamente tu primer smart contract utilizando Solidity en Remix. Ahora puedes explorar más sobre Solidity y la programación de contratos inteligentes. Recuerda que este tutorial es solo un punto de partida, y hay mucho más por aprender en el mundo de la tecnología blockchain.
 
@@ -467,7 +469,8 @@ Después de escribir y desplegar un contrato de token ERC-20, los usuarios puede
 - [ ] Ingresa la cantidad de tokens que deseas transferir en "value".
 - [ ] Haz clic en "transact".
 
-![image-20230815181900217](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815181900217.png)
+![Captura de pantalla 2023-08-15 181856](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/cc2f9cdc-b5c7-419c-b204-b78c95afda5d)
+
 
 ### **Mi Primer NFT** - ERC721
 
