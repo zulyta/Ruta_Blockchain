@@ -39,7 +39,7 @@
 
 **La Web 3.0** es la versión descentralizada de Internet, basada en tecnologías avanzadas como la blockchain y las criptomonedas. Su propósito es arrebatar el poder a las grandes tecnológicas y ponerlo en manos de personas reales. La Web 3.0 busca crear un internet más equitativo y dar control a los usuarios sobre sus propios datos. En resumen, el artículo explica las diferencias entre las tres versiones de la web, destacando las características y atributos de cada una de ellas.
 
-![1](D:\repo.visualcode\Ruta_Blockchain\img\1.png)
+![1](https://github.com/zulyta/Ruta_Blockchain/blob/main/img/1.png?raw=true)
 
 ### **¿Qué es blockchain y cómo se relaciona con la Web 3.0?**
 
