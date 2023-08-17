@@ -1,8 +1,9 @@
-## **Ruta al Blockchain: Programando Contratos Inteligentes**
+
+![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/91261e88-73a2-4a2a-864e-bd81b7122cb6)
 
 # Índice
 
-## **Día 1: Fundamentos de Blockchain y Creación de Wallets**
+#### **Día 1: Fundamentos de Blockchain y Creación de Wallets**
 
 - [¿Qué es Web 3.0?](#qué-es-web-30)
 - [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#qué-es-blockchain-y-cómo-se-relaciona-con-la-web-30)
@@ -12,7 +13,7 @@
 - [Creación de una wallet en blockchain](#creación-de-una-wallet-en-blockchain)
 - [Creación de un Smart Contract con Solidity en Remix](#creación-de-un-smart-contract-con-solidity-en-remix)
 
-## **Día 2: Introducción a Solidity y Desarrollo de Contratos Simples**
+#### **Día 2: Introducción a Solidity y Desarrollo de Contratos Simples**
 
 - [Visión general de Ethereum y su Máquina Virtual (EVM)](#visión-general-de-ethereum-y-su-máquina-virtual-evm)
 - [¿Qué es Solidity?](#qué-es-solidity)
@@ -21,7 +22,7 @@
 - [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
 - [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
 
-## **Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
+#### **Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
 - [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
 - [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
