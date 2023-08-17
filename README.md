@@ -2,25 +2,7 @@
 
 # Índice
 
-###  [¿Día 1. Fundamentos de Blockchain y Creación de Wallets?](#Fundamento_BCW)
-####  [¿Que es web3?](#Qew)
-####  [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#B_Y_W)
-####  [Características principales de blockchain](#Carac_pb)
-####  [Protocolos y proyectos de blockchain](#prot_pory)
-####  [Concepto de wallet en el contexto de blockchain](#concept)
-####  [Creación de una wallet en blockchain](#crea_wb)
-####  [Creación de un Smart Contract con Solidity en Remix](#Creac_SMSR)
-### [Día 2: Introducción a Solidity y Desarrollo de Contratos Simples](#d.Int)
-#### [Visión general de Ethereum y su Máquina Virtual](#visgen_)
-#### [¿Qué es Solidity?](#qué-es-solidity)
-#### [Estructura básica de un contrato en Solidity](#estructura-básica-de-un-contrato-en-solidity)
-#### [Variables y tipos de datos en Solidity](#variables-y-tipos-de-datos-en-solidity)
-#### [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
-#### [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
-### [Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin](dia)
-#### [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
-#### [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
-#### [Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721](#compilación-despliegue-e-interacción-de-smart-contract-token-erc-20-y-nfts-erc-721)
+[TOC]
 
 
 
@@ -355,7 +337,7 @@ El estándar ERC-20 establece varias funciones clave que deben estar presentes e
 
 Para crear un contrato de token ERC-20 básico, es esencial definir las variables necesarias, como `name` (nombre del token), `symbol` (símbolo del token), `decimals` (cantidad de decimales para la representación), y `totalSupply` (suministro total de tokens). Luego, se implementan las funciones requeridas por el estándar, como `transfer` y `balanceOf`.
 
-##### 	**Creando un Token ERC-20 Básico**
+#####   **Creando un Token ERC-20 Básico**
 
 **1.** **Abre Remix**
 
@@ -493,7 +475,7 @@ Después de escribir y desplegar un contrato de token ERC-20, los usuarios puede
 
 ## **Dia 3. Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
-### **Concepto de tokens no fungibles (NFTs) y el estándar ERC-721.**
+### **Concepto de tokens no fungibles (NFTs) y el estándar ERC-721**
 
 Los tokens no fungibles (NFTs) son una forma especial de activos digitales que representan elementos únicos e indivisibles en línea. A diferencia de las criptomonedas tradicionales como Bitcoin y Ethereum, que son fungibles y se pueden intercambiar en una relación uno a uno, los NFTs son únicos y tienen propiedades y atributos específicos que los diferencian de otros tokens.
 
@@ -574,7 +556,7 @@ Para utilizar OpenZeppelin en tus propios contratos, puedes importar los contrat
 
 **2. Creación del Contrato ERC-721**
 
-​	Copia y pega el código del contrato ERC-721 proporcionado en el archivo "NFTContract.sol".
+   Copia y pega el código del contrato ERC-721 proporcionado en el archivo "NFTContract.sol".
 
 ```solidity
 // SPDX-License-Identifier: MIT
