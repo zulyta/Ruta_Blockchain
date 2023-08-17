@@ -2,12 +2,32 @@
 
 # Índice
 
-### 1. [¿Qué es web3?](#Protocolos_y_proyectosblockchain)
+###  [¿Día 1. Fundamentos de Blockchain y Creación de Wallets?](#Fundamento_BCW)
+####  [¿Que es web3?](#Qew)
+####  [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#B_Y_W)
+####  [Características principales de blockchain](#Carac_pb)
+####  [Protocolos y proyectos de blockchain](#prot_pory)
+####  [Concepto de wallet en el contexto de blockchain](#concept)
+####  [Creación de una wallet en blockchain](#crea_wb)
+####  [Creación de un Smart Contract con Solidity en Remix](#Creac_SMSR)
+### [Día 2: Introducción a Solidity y Desarrollo de Contratos Simples](#d.Int)
+#### [Visión general de Ethereum y su Máquina Virtual](#visgen_)
+#### [¿Qué es Solidity?](#qué-es-solidity)
+#### [Estructura básica de un contrato en Solidity](#estructura-básica-de-un-contrato-en-solidity)
+#### [Variables y tipos de datos en Solidity](#variables-y-tipos-de-datos-en-solidity)
+#### [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
+#### [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
+### [Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin](dia)
+#### [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
+#### [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
+#### [Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721](#compilación-despliegue-e-interacción-de-smart-contract-token-erc-20-y-nfts-erc-721)
+
+
 
 
 ## **Día 1. Fundamentos de Blockchain y Creación de Wallets**
 
-### **¿Que es web3 ?** 
+### **¿Que es web3?** 
 
 **Web 3.0* es la evolución de Internet que busca crear una experiencia web más inteligente, interconectada y personalizada para los usuarios, utilizando tecnologías avanzadas y una comprensión más profunda de los datos. Se basa en la web semántica, la descentralización y el uso de tecnologías como la inteligencia artificial y la blockchain.
 
@@ -109,7 +129,7 @@ Una clave privada es como una contraseña, que debes guardar en secreto y no rev
 
 Ingrese a [Metamask](https://metamask.io/) descargue e instale su wallet.
 
-### **Creación de tu Primer Smart Contract con Solidity en Remix**
+### **Creación un Smart Contract con Solidity en Remix**
 
 En este tutorial, aprenderás cómo crear y desplegar tu primer smart contract utilizando el lenguaje de programación Solidity en el entorno de desarrollo Remix. Cubriremos desde la instalación de la billetera virtual Metamask hasta la explicación del código del smart contract proporcionado.
 
