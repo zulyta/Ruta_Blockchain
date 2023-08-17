@@ -4,28 +4,28 @@
 
 ## **Día 1: Fundamentos de Blockchain y Creación de Wallets**
 
-1. [¿Qué es Web 3.0?](#qué-es-web-30)
-2. [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#qué-es-blockchain-y-cómo-se-relaciona-con-la-web-30)
-3. [Características principales de blockchain](#características-principales-de-blockchain)
-4. [Protocolos y proyectos de blockchain](#protocolos-y-proyectos-de-blockchain)
-5. [Concepto de wallet en el contexto de blockchain](#concepto-de-wallet-en-el-contexto-de-blockchain)
-6. [Creación de una wallet en blockchain](#creación-de-una-wallet-en-blockchain)
-7. [Creación de un Smart Contract con Solidity en Remix](#creación-de-un-smart-contract-con-solidity-en-remix)
+- [¿Qué es Web 3.0?](#qué-es-web-30)
+- [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#qué-es-blockchain-y-cómo-se-relaciona-con-la-web-30)
+- [Características principales de blockchain](#características-principales-de-blockchain)
+- [Protocolos y proyectos de blockchain](#protocolos-y-proyectos-de-blockchain)
+- [Concepto de wallet en el contexto de blockchain](#concepto-de-wallet-en-el-contexto-de-blockchain)
+- [Creación de una wallet en blockchain](#creación-de-una-wallet-en-blockchain)
+- [Creación de un Smart Contract con Solidity en Remix](#creación-de-un-smart-contract-con-solidity-en-remix)
 
 ## **Día 2: Introducción a Solidity y Desarrollo de Contratos Simples**
 
-8. [Visión general de Ethereum y su Máquina Virtual (EVM)](#visión-general-de-ethereum-y-su-máquina-virtual-evm)
-9. [¿Qué es Solidity?](#qué-es-solidity)
-10. [Estructura básica de un contrato en Solidity](#estructura-básica-de-un-contrato-en-solidity)
-11. [Variables y tipos de datos en Solidity](#variables-y-tipos-de-datos-en-solidity)
-12. [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
-13. [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
+- [Visión general de Ethereum y su Máquina Virtual (EVM)](#visión-general-de-ethereum-y-su-máquina-virtual-evm)
+- [¿Qué es Solidity?](#qué-es-solidity)
+- [Estructura básica de un contrato en Solidity](#estructura-básica-de-un-contrato-en-solidity)
+- [Variables y tipos de datos en Solidity](#variables-y-tipos-de-datos-en-solidity)
+- [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
+- [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
 
 ## **Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
-14. [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
-15. [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
-16. [Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721](#compilación-despliegue-e-interacción-de-smart-contract-token-erc-20-y-nfts-erc-721)
+- [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
+- [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
+- [Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721](#compilación-despliegue-e-interacción-de-smart-contract-token-erc-20-y-nfts-erc-721)
 
 ## **Día 1. Fundamentos de Blockchain y Creación de Wallets**
 
