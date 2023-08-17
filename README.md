@@ -1,8 +1,12 @@
 ## **Ruta al Blockchain: Programando Contratos Inteligentes**
 
-### Que es web3 ? 
+[TOC]
 
-Web 3.0 es la evolución de Internet que busca crear una experiencia web más inteligente, interconectada y personalizada para los usuarios, utilizando tecnologías avanzadas y una comprensión más profunda de los datos. Se basa en la web semántica, la descentralización y el uso de tecnologías como la inteligencia artificial y la blockchain.
+## **Día 1. Fundamentos de Blockchain y Creación de Wallets**
+
+### **¿Que es web3 ?** 
+
+**Web 3.0* es la evolución de Internet que busca crear una experiencia web más inteligente, interconectada y personalizada para los usuarios, utilizando tecnologías avanzadas y una comprensión más profunda de los datos. Se basa en la web semántica, la descentralización y el uso de tecnologías como la inteligencia artificial y la blockchain.
 
 **Web 1.0** es la versión más básica de Internet, caracterizada por ser unidireccional y basada en contenidos estáticos. Los sitios web eran de solo lectura y el contenido no cambiaba a menos que el webmaster lo actualizara.
 
@@ -10,8 +14,7 @@ Web 3.0 es la evolución de Internet que busca crear una experiencia web más in
 
 **La Web 3.0** es la versión descentralizada de Internet, basada en tecnologías avanzadas como la blockchain y las criptomonedas. Su propósito es arrebatar el poder a las grandes tecnológicas y ponerlo en manos de personas reales. La Web 3.0 busca crear un internet más equitativo y dar control a los usuarios sobre sus propios datos. En resumen, el artículo explica las diferencias entre las tres versiones de la web, destacando las características y atributos de cada una de ellas.
 
-![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/509c42b4-31b0-4f47-859f-de46d1fb28ac)
-
+![image-20230815210001253](D:\repo.visualcode\Ruta_Blockchain\img\1.png)
 
 ### **¿Qué es blockchain y cómo se relaciona con la Web 3.0?**
 
@@ -21,8 +24,7 @@ La Web 3.0 busca descentralizar la web y empoderar a los usuarios al permitirles
 
 **Ejemplo**
 
-![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/262f33d3-1a13-45b5-8525-94b4eb5cfcb5)
-
+![image-20230815210028041](D:\repo.visualcode\Ruta_Blockchain\img\2.png)
 
 Imagina que Bob quiere transferir dinero a Alice. En el proceso tradicional, Bob necesita la ayuda de un intermediario, como un banco, para completar la transferencia. El banco actúa como árbitro y verifica si Bob tiene suficiente saldo y luego facilita la transferencia de dinero a través de su sistema. Sin embargo, este sistema tiene sus limitaciones, ya que el banco tiene el control total sobre la transacción y puede modificar la información.
 
@@ -42,8 +44,7 @@ En esencia, la blockchain proporciona un método confiable para registrar y veri
 
 ### **Características principales de blockchain**
 
-![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/cf5763c1-2fcb-4a74-8016-4d4156bf0200)
-
+![image-20230815210806258](D:\repo.visualcode\Ruta_Blockchain\img\3.png) 
 
 **Descentralización** es la característica que hace que la blockchain no dependa de una autoridad central o intermediario para validar las transacciones o mantener el registro. Esto es muy importante porque elimina el riesgo de censura, control, monopolio y abuso de poder. Además, permite crear una red más democrática, participativa y colaborativa, donde todos los nodos tienen el mismo peso e importancia.
 
@@ -53,10 +54,9 @@ En esencia, la blockchain proporciona un método confiable para registrar y veri
 
 ### **Protocolos y proyectos de blockchain**
 
-#### **Protocolos** 
+**Protocolos** 
 
-![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/0399a542-f0b8-41e1-a324-9ed6f9379c3c)
-
+![image-20230815211023007](D:\repo.visualcode\Ruta_Blockchain\img\4.png)
 
 Los protocolos son diferentes formas de implementar la tecnología blockchain, que es un sistema de registro distribuido y seguro que permite crear y transferir valor sin intermediarios. Cada protocolo tiene sus propias características, ventajas y desafíos.
 
@@ -68,10 +68,9 @@ Los protocolos son diferentes formas de implementar la tecnología blockchain, q
 
 **Cardano:** Es un protocolo blockchain que se basa en la investigación científica y el desarrollo basado en evidencia. Cardano utiliza un algoritmo de consenso llamado Ouroboros, que es una versión mejorada de PoS que reduce el consumo energético y mejora la seguridad. Cardano se divide en dos capas: la capa de liquidación, que maneja las transacciones de su criptomoneda nativa, el ada (ADA), y la capa de cómputo, que maneja los contratos inteligentes y las dApps. Cardano tiene una oferta limitada de 45.000 millones de ADA y se enfoca en ser una plataforma para servicios financieros inclusivos y sostenibles. 
 
-#### **Proyectos de Blockchain** 
+**Proyectos de Blockchain** 
 
-![image](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/c0bf0a7f-7af0-4c58-ae2d-00c31b10666c)
-
+![image-20230815211048530](D:\repo.visualcode\Ruta_Blockchain\img\5.png)
 
 **[Tru Market](https://www.youtube.com/watch?v=ZV7mifdd9Sc)**
 
@@ -111,7 +110,7 @@ Ingrese a [Metamask](https://metamask.io/) descargue e instale su wallet.
 
 En este tutorial, aprenderás cómo crear y desplegar tu primer smart contract utilizando el lenguaje de programación Solidity en el entorno de desarrollo Remix. Cubriremos desde la instalación de la billetera virtual Metamask hasta la explicación del código del smart contract proporcionado.
 
-##### **1. Instalación de Metamask**
+**1. Instalación de Metamask**
 
 - [ ] Si aún no tienes Metamask instalado en tu navegador, ve a la página oficial de Metamask (https://metamask.io/) y sigue las instrucciones para instalar la extensión en tu navegador (por ejemplo, Google Chrome).
 
@@ -129,7 +128,7 @@ En este tutorial, aprenderás cómo crear y desplegar tu primer smart contract u
 
    
 
-##### **2. Ingreso al Entorno de Desarrollo Remix**
+**2. Ingreso al Entorno de Desarrollo Remix**
 
 1. Abre tu navegador y ve a Remix en la siguiente dirección: https://remix.ethereum.org/, interfaz de desarrollo que permite la creación rápida de Smart Contracts. Es usado normalmente para crear rápidos prototipos o pruebas de concepto de Smart Contracts.
 
@@ -170,13 +169,13 @@ contract MiPrimerContrato {
 }
 ```
 
-##### **4. Explicación del Código**
+**4. Explicación del Código**
 
 - El contrato `MiPrimerContrato` tiene dos funciones principales: `set` y `get`.
 - La función `set` permite actualizar el valor de la variable `saludo`. Toma un argumento `_nuevoSaludo` de tipo `string` y actualiza la variable `saludo` con ese valor.
 - La función `get` permite recuperar el valor actual de la variable `saludo`.
 
-##### **5. Compilación y Despliegue**
+**5. Compilación y Despliegue**
 
 - [ ] En Remix, ve a la pestaña "Solidity Compiler".
 
@@ -194,10 +193,9 @@ contract MiPrimerContrato {
 
 - [ ] Confirma la transacción en Metamask.
 
-   ![Captura de pantalla 2023-08-15 100335](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/9e63f533-d2a8-4d89-9d19-defeb05ff8f8)
+   ![](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815100421312.png)
 
-
-##### **6. Interactuando con el Smart Contract**
+**6. Interactuando con el Smart Contract**
 
 1. Después de desplegar el contrato, verás las funciones `set` y `get` disponibles.
 
@@ -205,24 +203,23 @@ contract MiPrimerContrato {
 
 3. Utiliza la función `get` para recuperar el saludo almacenado.
 
- ![Captura de pantalla 2023-08-15 100824](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/ac4d49bf-9bf6-4ede-8e94-35e6118262ef)
+   ![image-20230815100840220](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815100840220.png)
 
+Has creado y desplegado exitosamente tu primer smart contract utilizando Solidity en Remix. Ahora puedes explorar más sobre Solidity y la programación de contratos inteligentes. Recuerda que este tutorial es solo un punto de partida, y hay mucho más por aprender en el mundo de la tecnología blockchain.
 
-Has creado y desplegado exitosamente tu primer smart contract utilizando Solidity en Remix. Ahora puedes explorar más sobre Solidity y la programación de contratos inteligentes. 
+## **Dia 2.** **Introducción a Solidity, Desarrollo de Contratos Simples**
 
-### **Introducción a Solidity, Desarrollo de Contratos Simples**
-
-#### **Visión general de Ethereum y su Máquina Virtual (EVM).**
+### **Visión general de Ethereum y su Máquina Virtual (EVM).**
 
 Ethereum es una plataforma blockchain que permite crear y ejecutar contratos inteligentes y aplicaciones descentralizadas (dApps) para diversos fines. Ethereum tiene su propia criptomoneda nativa, el ether (ETH), que se usa para pagar las transacciones y los servicios en la red. Ethereum también tiene su propio lenguaje de programación, llamado Solidity, que se usa para escribir los contratos inteligentes y las dApps.
 
 La máquina virtual de Ethereum es el corazón de Ethereum, es el sistema operativo de la cadena de bloques y donde ocurre todo el trabajo pesado, cada vez que se ejecuta un método de un contrato inteligente, el EVM crea un entorno virtual donde suceden todas las instrucciones dentro de ese método. Este entorno virtual captura el estado actual de la cadena de bloques y proporciona un resultado seguro y determinista. Dado el mismo estado y entradas, se obtiene el mismo resultado. El contrato inteligente puede leer datos de la cadena de bloques y también interactuar con otros contratos inteligentes. Los cambios realizados en el estado de la cadena de bloques se registran y se incluyen en una transacción. Esta transacción se transmite a la red y, una vez que se confirma la transacción, se crea un nuevo estado de cadena de bloques. Ese nuevo estado se convierte en el estado actual.
 
-#### **¿Qué es Solidity? Características y aplicaciones.**
+### **¿Qué es Solidity? **
 
 Solidity es un lenguaje de programación de alto nivel y orientado a objetos que se usa para crear y ejecutar contratos inteligentes en la red blockchain de Ethereum. Un contrato inteligente es un programa que define y ejecuta las reglas de un acuerdo entre dos o más partes, sin necesidad de intermediarios ni de confianza. Solidity tiene una sintaxis similar a la de C++, Python y JavaScript, y está diseñado para interactuar con la Máquina Virtual de Ethereum (EVM), que es el motor que procesa y almacena las transacciones y los estados de la blockchain.
 
-##### Algunas características de Solidity son:
+**Algunas características de Solidity son:**
 
 - Es un lenguaje de tipado estático, lo que significa que los tipos de datos de las variables se definen en el momento de la compilación y no pueden cambiar durante la ejecución.
 
@@ -234,7 +231,7 @@ Solidity es un lenguaje de programación de alto nivel y orientado a objetos que
 
 - Tiene un sistema de excepciones y errores que permite controlar el flujo y la seguridad de los contratos inteligentes.
 
-##### Algunas aplicaciones de Solidity son:
+**Algunas aplicaciones de Solidity son:**
 
 - Crear tokens, que son unidades de valor digital que representan diferentes activos o derechos dentro de una red blockchain. Por ejemplo, se pueden crear tokens para representar acciones, votos, puntos, recompensas, etc.
 
@@ -242,7 +239,7 @@ Solidity es un lenguaje de programación de alto nivel y orientado a objetos que
 
 - Crear protocolos financieros descentralizados (DeFi), que son sistemas que ofrecen servicios financieros como préstamos, inversiones, seguros, etc., sin intermediarios ni reguladores. Por ejemplo, se pueden crear protocolos DeFi para facilitar el acceso al crédito, el ahorro, el intercambio, etc.
 
-#### **Estructura básica de un contrato en Solidity**
+### **Estructura básica de un contrato en Solidity**
 
 Un contrato en Solidity es una colección de código y datos que se ejecutan en la red blockchain de Ethereum. Un contrato se define con la palabra reservada contract, seguida del nombre del contrato y las llaves que encierran el cuerpo del contrato. Dentro del cuerpo del contrato se pueden declarar variables, funciones, eventos, modificadores y otros elementos. 
 
@@ -289,7 +286,7 @@ En este ejemplo:
 
 Esta es una estructura básica y que los contratos pueden ser mucho más complejos dependiendo de los requisitos y la lógica que desees implementar. Las variables de estado y las funciones son solo dos de los muchos elementos que puedes utilizar en Solidity para construir Smart Contracts en la cadena de bloques Ethereum.
 
-#### **Variables y tipos de datos en Solidity**
+### **Variables y tipos de datos en Solidity**
 
 Las variables son contenedores que almacenan valores que se pueden usar o modificar en el contrato. Las variables se declaran con el tipo de dato, el nombre y el valor inicial (opcional), Solidity tiene varios tipos de datos, como enteros (uint, int), booleanos (bool), cadenas (string), direcciones (address), arreglos (array), estructuras (struct), enumeraciones (enum) y otros. 
 
@@ -312,7 +309,7 @@ Las variables son contenedores que almacenan valores que se pueden usar o modifi
 
 Esta tabla solo presenta algunos de los tipos de datos más comunes, Solidity también tiene otros tipos y características que pueden ser utilizados en la creación de contratos inteligentes.
 
-#### **Introducción al estándar ERC-20 para tokens fungibles**
+### **Introducción al estándar ERC-20 para tokens fungibles**
 
 Los tokens fungibles son activos digitales idénticos e intercambiables entre sí, ya que cada uno tiene el mismo valor y características. Estos tokens permiten la creación de mercados líquidos y son ampliamente utilizados en diversas aplicaciones, como monedas digitales, representación de activos y programas de recompensas.
 
@@ -331,22 +328,22 @@ El estándar ERC-20 establece varias funciones clave que deben estar presentes e
 - `approve(address _spender, uint256 _value) external returns (bool)`: Otorga permiso a una dirección (el "gastador") para gastar una cantidad específica de tokens en nombre del propietario.
 - `allowance(address _owner, address _spender) external view returns (uint256)`: Devuelve la cantidad de tokens que el gastador está autorizado a gastar en nombre del propietario.
 
-#### **Programación, despliegue e interacción con un token personalizado (ERC-20)**
+### **Programación, despliegue e interacción con un token personalizado (ERC-20)**
 
 Para crear un contrato de token ERC-20 básico, es esencial definir las variables necesarias, como `name` (nombre del token), `symbol` (símbolo del token), `decimals` (cantidad de decimales para la representación), y `totalSupply` (suministro total de tokens). Luego, se implementan las funciones requeridas por el estándar, como `transfer` y `balanceOf`.
 
-##### 	Creando un Token ERC-20 Básico
+##### 	**Creando un Token ERC-20 Básico**
 
-##### **1.** Abre Remix
+**1.** **Abre Remix**
 
 - [ ] Abre tu navegador y ve a https://remix.ethereum.org/.
 
-##### **2. Crear un Nuevo Archivo**
+**2. Crear un Nuevo Archivo**
 
 - [ ] En la pestaña "File Explorer", haz clic en "New File".
 - [ ] Ingresa el nombre del archivo como "TokenERC20.sol" y haz clic en "OK".
 
-##### **3.** Escribir el Código del Token ERC-20
+**3. Escribir el Código del Token ERC-20**
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -438,9 +435,9 @@ Este método se utiliza para transferir tokens de una dirección (`from`) a otra
 
 Después de escribir y desplegar un contrato de token ERC-20, los usuarios pueden interactuar con él mediante transacciones en la blockchain. Pueden consultar su saldo utilizando la función `balanceOf`, transferir tokens a otras direcciones utilizando la función `transfer`, otorgar permisos de gasto a otras direcciones utilizando `approve`, y realizar transferencias autorizadas utilizando `transferFrom`.
 
-#####  Interactuando con el Token ERC-20
+**6. Interactuando con el Token ERC-20**
 
-##### Transferir Tokens
+**Transferir Tokens**
 
 - [ ] En la pestaña "Deployed Contracts", verás el contrato TokenERC20 desplegado.
 - [ ] En la sección "write", selecciona "transfer".
@@ -448,20 +445,20 @@ Después de escribir y desplegar un contrato de token ERC-20, los usuarios puede
 - [ ] Ingresa la cantidad de tokens que deseas transferir en "value".
 - [ ] Haz clic en "transact".
 
-##### Verificar el Saldo
+**Verificar el Saldo**
 
 - [ ] En la sección "read", selecciona "balanceOf".
 - [ ] Ingresa la dirección para la cual deseas verificar el saldo en "who".
 - [ ] Haz clic en "call".
 
-##### Aprobación (approve)
+**Aprobación (approve)**
 
 - [ ] En la sección "write", selecciona "approve".
 - [ ] Ingresa la dirección del beneficiario (spender) en "spender".
 - [ ] Ingresa la cantidad de tokens que deseas aprobar en "value".
 - [ ] Haz clic en "transact".
 
-##### Transferencia Desde (transferFrom)
+**Transferencia Desde (transferFrom)**
 
 - [ ] En la sección "write", selecciona "transferFrom".
 - [ ] Ingresa la dirección del remitente (from) en "from".
@@ -469,18 +466,11 @@ Después de escribir y desplegar un contrato de token ERC-20, los usuarios puede
 - [ ] Ingresa la cantidad de tokens que deseas transferir en "value".
 - [ ] Haz clic en "transact".
 
-![Captura de pantalla 2023-08-15 181856](https://github.com/zulyta/Ruta_Blockchain/assets/32932810/cc2f9cdc-b5c7-419c-b204-b78c95afda5d)
+![image-20230815181900217](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815181900217.png)
 
+## **Dia 3. Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
-### **Mi Primer NFT** - ERC721
-
-#### ¿Que es OpenZeppelin? 
-
-OpenZeppelin es una biblioteca de contratos inteligentes de código abierto y ampliamente utilizada en la comunidad de Ethereum y otras cadenas de bloques. La biblioteca está diseñada para facilitar el desarrollo seguro y eficiente de contratos inteligentes al proporcionar implementaciones pre-auditadas y probadas para una variedad de estándares y patrones comunes en la industria de las criptomonedas y blockchain.
-
-Para utilizar OpenZeppelin en tus propios contratos, puedes importar los contratos de la biblioteca en tus archivos Solidity. Esto te permite aprovechar las implementaciones seguras y probadas sin tener que escribir todo el código desde cero. Por ejemplo, si deseas crear un token ERC-20 o una coleccion NFT ERC-721, puedes importar el contrato `ERC20.sol`o `ERC721.sol` de OpenZeppelin y personalizarlo según tus necesidades.
-
-**Concepto de tokens no fungibles (NFTs) y el estándar ERC-721.**
+### **Concepto de tokens no fungibles (NFTs) y el estándar ERC-721.**
 
 Los tokens no fungibles (NFTs) son una forma especial de activos digitales que representan elementos únicos e indivisibles en línea. A diferencia de las criptomonedas tradicionales como Bitcoin y Ethereum, que son fungibles y se pueden intercambiar en una relación uno a uno, los NFTs son únicos y tienen propiedades y atributos específicos que los diferencian de otros tokens.
 
@@ -500,9 +490,15 @@ El estándar ERC-721 es un conjunto de reglas y pautas para crear tokens no fung
 
 El estándar ERC-721 ha sentado las bases para el desarrollo de una amplia variedad de aplicaciones y plataformas basadas en NFT, desde mercados de arte digital hasta juegos blockchain y más. Los NFTs han revolucionado la forma en que percibimos y valoramos la propiedad digital, y continúan siendo una parte emocionante y en evolución del espacio blockchain.
 
-**Compilación, despliegue e interacción de smart contracto TokenERC20 y NFTs ERC721**
+### **¿Que es [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)?** 
 
- **Creación de un Token ERC-20 con OpenZeppelin**
+OpenZeppelin es una biblioteca de contratos inteligentes de código abierto y ampliamente utilizada en la comunidad de Ethereum y otras cadenas de bloques. La biblioteca está diseñada para facilitar el desarrollo seguro y eficiente de contratos inteligentes al proporcionar implementaciones pre-auditadas y probadas para una variedad de estándares y patrones comunes en la industria de las criptomonedas y blockchain.
+
+Para utilizar OpenZeppelin en tus propios contratos, puedes importar los contratos de la biblioteca en tus archivos Solidity. Esto te permite aprovechar las implementaciones seguras y probadas sin tener que escribir todo el código desde cero. Por ejemplo, si deseas crear un token ERC-20 o una coleccion NFT ERC-721, puedes importar el contrato `ERC20.sol`o `ERC721.sol` de OpenZeppelin y personalizarlo según tus necesidades.
+
+### **Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721**
+
+####  **Creación de un Token ERC-20 con OpenZeppelin**
 
 **1. Preparación y Configuración**
 
@@ -545,7 +541,7 @@ El estándar ERC-721 ha sentado las bases para el desarrollo de una amplia varie
 - [ ] Utiliza el método `transfer` para transferir tokens a otra dirección.
 - [ ] Puedes probar otros métodos como `approve`, `transferFrom`, `allowance` para comprender cómo funcionan.
 
-**Creación de un NFT ERC-721 con OpenZeppelin**
+#### **Creación de un NFT ERC-721 con OpenZeppelin**
 
 **1. Preparación y Configuración**
 
