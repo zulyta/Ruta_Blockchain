@@ -1,6 +1,10 @@
 ## **Ruta al Blockchain: Programando Contratos Inteligentes**
 
-[TOC]
+# Índice
+## **Día 1. Fundamentos de Blockchain y Creación de Wallets**
+### **¿Que es web3 ?** 
+### **¿Qué es blockchain y cómo se relaciona con la Web 3.0?**
+
 
 ## **Día 1. Fundamentos de Blockchain y Creación de Wallets**
 
