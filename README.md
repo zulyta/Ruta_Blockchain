@@ -49,7 +49,7 @@ La Web 3.0 busca descentralizar la web y empoderar a los usuarios al permitirles
 
 **Ejemplo**
 
-![2](D:\repo.visualcode\Ruta_Blockchain\img\2.png)
+![2](https://github.com/zulyta/Ruta_Blockchain/blob/main/img/2.png?raw=true)
 
 Imagina que Bob quiere transferir dinero a Alice. En el proceso tradicional, Bob necesita la ayuda de un intermediario, como un banco, para completar la transferencia. El banco actúa como árbitro y verifica si Bob tiene suficiente saldo y luego facilita la transferencia de dinero a través de su sistema. Sin embargo, este sistema tiene sus limitaciones, ya que el banco tiene el control total sobre la transacción y puede modificar la información.
 
@@ -69,7 +69,7 @@ En esencia, la blockchain proporciona un método confiable para registrar y veri
 
 ### **Características principales de blockchain**
 
-![3](D:\repo.visualcode\Ruta_Blockchain\img\3.png) 
+![3](https://github.com/zulyta/Ruta_Blockchain/blob/main/img/3.png?raw=true) 
 
 **Descentralización** es la característica que hace que la blockchain no dependa de una autoridad central o intermediario para validar las transacciones o mantener el registro. Esto es muy importante porque elimina el riesgo de censura, control, monopolio y abuso de poder. Además, permite crear una red más democrática, participativa y colaborativa, donde todos los nodos tienen el mismo peso e importancia.
 
@@ -81,7 +81,7 @@ En esencia, la blockchain proporciona un método confiable para registrar y veri
 
 **Protocolos** 
 
-![4](D:\repo.visualcode\Ruta_Blockchain\img\4.png)
+![4](https://github.com/zulyta/Ruta_Blockchain/blob/main/img/4.png?raw=true)
 
 Los protocolos son diferentes formas de implementar la tecnología blockchain, que es un sistema de registro distribuido y seguro que permite crear y transferir valor sin intermediarios. Cada protocolo tiene sus propias características, ventajas y desafíos.
 
@@ -95,7 +95,7 @@ Los protocolos son diferentes formas de implementar la tecnología blockchain, q
 
 **Proyectos de Blockchain** 
 
-![5](D:\repo.visualcode\Ruta_Blockchain\img\5.png)
+![5](https://github.com/zulyta/Ruta_Blockchain/blob/main/img/5.png?raw=true)
 
 **[Tru Market](https://www.youtube.com/watch?v=ZV7mifdd9Sc)**
 
