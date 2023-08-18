@@ -259,11 +259,11 @@ Solidity es un lenguaje de programación de alto nivel y orientado a objetos que
 
 **Algunas aplicaciones de Solidity son:**
 
-- Creacion de tokens, que son unidades de valor digital que representan diferentes activos o derechos dentro de una red blockchain. Por ejemplo, se pueden crear tokens para representar acciones, votos, puntos, recompensas, etc.
+- Tokens, que son unidades de valor digital que representan diferentes activos o derechos dentro de una red blockchain. Por ejemplo, se pueden crear tokens para representar acciones, votos, puntos, recompensas, etc.
 
-- Crearcion de aplicaciones descentralizadas (dApps), que son aplicaciones que funcionan en la red blockchain sin depender de servidores centrales ni autoridades. Por ejemplo, se pueden crear dApps para realizar votaciones, crowdfunding, subastas, juegos, etc.
+- Aplicaciones descentralizadas (dApps), que son aplicaciones que funcionan en la red blockchain sin depender de servidores centrales ni autoridades. Por ejemplo, se pueden crear dApps para realizar votaciones, crowdfunding, subastas, juegos, etc.
 
-- Creacion de protocolos financieros descentralizados (DeFi), que son sistemas que ofrecen servicios financieros como préstamos, inversiones, seguros, etc., sin intermediarios ni reguladores. Por ejemplo, se pueden crear protocolos DeFi para facilitar el acceso al crédito, el ahorro, el intercambio, etc.
+- Protocolos financieros descentralizados (DeFi), que son sistemas que ofrecen servicios financieros como préstamos, inversiones, seguros, etc., sin intermediarios ni reguladores. Por ejemplo, se pueden crear protocolos DeFi para facilitar el acceso al crédito, el ahorro, el intercambio, etc.
 
 ### **Estructura básica de un contrato en Solidity**
 
