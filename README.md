@@ -5,9 +5,9 @@
 
 #### **Día 1: Fundamentos de Blockchain y Creación de Wallets**
 
-- [¿Qué es Web 3.0?](#qué-es-web-30)
-- [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#qué-es-blockchain-y-cómo-se-relaciona-con-la-web-30)
-- [Características principales de blockchain](#características-principales-de-blockchain)
+- [¿Qué es Web 3.0?](#que-es-web-30)
+- [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#que-es-blockchain-y-cómo-se-relaciona-con-la-web-30)
+- [Características principales de blockchain](#caracteristicas-principales-de-blockchain)
 - [Protocolos y proyectos de blockchain](#protocolos-y-proyectos-de-blockchain)
 - [Concepto de wallet en el contexto de blockchain](#concepto-de-wallet-en-el-contexto-de-blockchain)
 - [Creación de una wallet en blockchain](#creación-de-una-wallet-en-blockchain)
@@ -15,18 +15,18 @@
 
 #### **Día 2: Introducción a Solidity y Desarrollo de Contratos Simples**
 
-- [Visión general de Ethereum y su Máquina Virtual (EVM)](#visión-general-de-ethereum-y-su-máquina-virtual-evm)
+- [Visión general de Ethereum y su Máquina Virtual (EVM)](#vision-general-de-ethereum-y-su-maquina-virtual-evm)
 - [¿Qué es Solidity?](#qué-es-solidity)
-- [Estructura básica de un contrato en Solidity](#estructura-básica-de-un-contrato-en-solidity)
+- [Estructura básica de un contrato en Solidity](#estructura-basica-de-un-contrato-en-solidity)
 - [Variables y tipos de datos en Solidity](#variables-y-tipos-de-datos-en-solidity)
-- [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
-- [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
+- [Introducción al estándar ERC-20 para tokens fungibles](#introduccion-al-estandar-erc-20-para-tokens-fungibles)
+- [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programacion-despliegue-e-interacción-con-un-token-personalizado-erc-20)
 
 #### **Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
-- [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
-- [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
-- [Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721](#compilación-despliegue-e-interacción-de-smart-contract-token-erc-20-y-nfts-erc-721)
+- [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estandar-erc-721)
+- [¿Qué es OpenZeppelin?](#que-es-openzeppelin)
+- [Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721](#compilacion-despliegue-e-interaccion-de-smart-contract-token-erc-20-y-nfts-erc-721)
 
 ## **Día 1. Fundamentos de Blockchain y Creación de Wallets**
 
