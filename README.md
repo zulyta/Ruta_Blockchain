@@ -76,7 +76,9 @@ En esencia, la blockchain proporciona un método confiable para registrar y veri
 
 **Transparencia** es la característica que permite que todos los participantes de la red puedan ver el historial completo de las transacciones y los datos almacenados en la blockchain, sin necesidad de permisos especiales o identidades. Esto es muy importante porque facilita la rendición de cuentas, el cumplimiento de normas, la confianza entre las partes y la resolución de conflictos. Además, permite crear una red más abierta, honesta y responsable, donde todos los actos tienen consecuencias. 
 
-**Interoperabilidad** permite que diferentes ecosistemas de blockchain interactúen y se comuniquen sin problemas, lo que amplía la utilidad de blockchain al mejorar la funcionalidad y las posibles aplicaciones de estos sistemas no solo se refiere a la conectividad entre blockchains, sino que también se extiende a los protocolos y los contratos inteligentes, lo que permite que los contratos inteligentes operen en múltiples blockchains, es esencial para que las cadenas de bloques obtengan adopción en las diversas industrias en las que pueden ser utilizadas
+**Inmutabilidad** garantiza que una vez que los datos se registran en un bloque y se añaden a la cadena de bloques, no se pueden modificar ni eliminar sin dejar rastro. Esto se logra mediante funciones criptográficas y el consenso distribuido de la red, lo que brinda seguridad, confianza y transparencia a los registros, además de garantizar la integridad de los datos y permitir la rastreabilidad y la prevención de fraudes en diversas aplicaciones.
+
+**Interoperabilidad** permite que diferentes ecosistemas de blockchain interactúen y se comuniquen sin problemas, lo que amplía la utilidad de blockchain al mejorar la funcionalidad y las posibles aplicaciones de estos sistemas no solo se refiere a la conectividad entre blockchains, sino que también se extiende a los protocolos y los contratos inteligentes, lo que permite que los contratos inteligentes operen en múltiples blockchains, es esencial para que las cadenas de bloques obtengan adopción en las diversas industrias en las que pueden ser utilizadas.
 
 ### **Protocolos y proyectos de blockchain**
 
@@ -228,9 +230,7 @@ contract MiPrimerContrato {
 2. Utiliza la función `set` para cambiar el valor del saludo. Ingresa un nuevo saludo en el campo de texto y haz clic en "transact".
 
 3. Utiliza la función `get` para recuperar el saludo almacenado.
-
-   
-
+ 
 Has creado y desplegado exitosamente tu primer smart contract utilizando Solidity en Remix. Ahora puedes explorar más sobre Solidity y la programación de contratos inteligentes. Recuerda que este tutorial es solo un punto de partida, y hay mucho más por aprender en el mundo de la tecnología blockchain.
 
 ## **Dia 2.** **Introducción a Solidity, Desarrollo de Contratos Simples**
@@ -259,11 +259,11 @@ Solidity es un lenguaje de programación de alto nivel y orientado a objetos que
 
 **Algunas aplicaciones de Solidity son:**
 
-- Crear tokens, que son unidades de valor digital que representan diferentes activos o derechos dentro de una red blockchain. Por ejemplo, se pueden crear tokens para representar acciones, votos, puntos, recompensas, etc.
+- Creacion de tokens, que son unidades de valor digital que representan diferentes activos o derechos dentro de una red blockchain. Por ejemplo, se pueden crear tokens para representar acciones, votos, puntos, recompensas, etc.
 
-- Crear aplicaciones descentralizadas (dApps), que son aplicaciones que funcionan en la red blockchain sin depender de servidores centrales ni autoridades. Por ejemplo, se pueden crear dApps para realizar votaciones, crowdfunding, subastas, juegos, etc.
+- Crearcion de aplicaciones descentralizadas (dApps), que son aplicaciones que funcionan en la red blockchain sin depender de servidores centrales ni autoridades. Por ejemplo, se pueden crear dApps para realizar votaciones, crowdfunding, subastas, juegos, etc.
 
-- Crear protocolos financieros descentralizados (DeFi), que son sistemas que ofrecen servicios financieros como préstamos, inversiones, seguros, etc., sin intermediarios ni reguladores. Por ejemplo, se pueden crear protocolos DeFi para facilitar el acceso al crédito, el ahorro, el intercambio, etc.
+- Creacion de protocolos financieros descentralizados (DeFi), que son sistemas que ofrecen servicios financieros como préstamos, inversiones, seguros, etc., sin intermediarios ni reguladores. Por ejemplo, se pueden crear protocolos DeFi para facilitar el acceso al crédito, el ahorro, el intercambio, etc.
 
 ### **Estructura básica de un contrato en Solidity**
 
