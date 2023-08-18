@@ -5,32 +5,32 @@
 
 #### **Día 1: Fundamentos de Blockchain y Creación de Wallets**
 
-- [¿Qué es Web 3.0?](#que-es-web-30)
-- [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#que-es-blockchain-y-cómo-se-relaciona-con-la-web-30)
-- [Características principales de blockchain](#caracteristicas-principales-de-blockchain)
+- [¿Qué es web 3?](#qué-es-web-3)
+- [¿Qué es blockchain y cómo se relaciona con la Web 3.0?](#qué-es-blockchain-y-cómo-se-relaciona-con-la-web-30)
+- [Características principales de blockchain](#características-principales-de-blockchain)
 - [Protocolos y proyectos de blockchain](#protocolos-y-proyectos-de-blockchain)
-- [Concepto de wallet en el contexto de blockchain](#concepto-de-wallet-en-el-contexto-de-blockchain)
-- [Creación de una wallet en blockchain](#creación-de-una-wallet-en-blockchain)
+- [Concepto de wallet en blockchain](#concepto-de-wallet-en-blockchain)
 - [Creación de un Smart Contract con Solidity en Remix](#creación-de-un-smart-contract-con-solidity-en-remix)
 
 #### **Día 2: Introducción a Solidity y Desarrollo de Contratos Simples**
 
-- [Visión general de Ethereum y su Máquina Virtual (EVM)](#vision-general-de-ethereum-y-su-maquina-virtual-evm)
+- [Visión general de Ethereum y su Máquina Virtual (EVM)](#visión-general-de-ethereum-y-su-máquina-virtual-evm)
 - [¿Qué es Solidity?](#qué-es-solidity)
-- [Estructura básica de un contrato en Solidity](#estructura-basica-de-un-contrato-en-solidity)
+- [Estructura básica de un contrato en Solidity](#estructura-básica-de-un-contrato-en-solidity)
 - [Variables y tipos de datos en Solidity](#variables-y-tipos-de-datos-en-solidity)
-- [Introducción al estándar ERC-20 para tokens fungibles](#introduccion-al-estandar-erc-20-para-tokens-fungibles)
-- [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programacion-despliegue-e-interacción-con-un-token-personalizado-erc-20)
+- [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
+- [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
 
 #### **Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
-- [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estandar-erc-721)
-- [¿Qué es OpenZeppelin?](#que-es-openzeppelin)
-- [Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721](#compilacion-despliegue-e-interaccion-de-smart-contract-token-erc-20-y-nfts-erc-721)
+- [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
+- [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
+- [Compilación, despliegue e interacción de contratos ERC20 y ERC721](#compilación-despliegue-e-interacción-de-contratos-erc20-y-erc721)
+
 
 ## **Día 1. Fundamentos de Blockchain y Creación de Wallets**
 
-### **¿Que es web3?** 
+### **¿Qué es web 3?** 
 
 **Web 3.0* es la evolución de Internet que busca crear una experiencia web más inteligente, interconectada y personalizada para los usuarios, utilizando tecnologías avanzadas y una comprensión más profunda de los datos. Se basa en la web semántica, la descentralización y el uso de tecnologías como la inteligencia artificial y la blockchain.
 
@@ -132,7 +132,7 @@ Una clave privada es como una contraseña, que debes guardar en secreto y no rev
 
 Ingrese a [Metamask](https://metamask.io/) descargue e instale su wallet.
 
-### **Creación un Smart Contract con Solidity en Remix**
+### **Creación de un Smart Contract con Solidity en Remix**
 
 En este tutorial, aprenderás cómo crear y desplegar tu primer smart contract utilizando el lenguaje de programación Solidity en el entorno de desarrollo Remix. Cubriremos desde la instalación de la billetera virtual Metamask hasta la explicación del código del smart contract proporcionado.
 
@@ -241,7 +241,7 @@ Ethereum es una plataforma blockchain que permite crear y ejecutar contratos int
 
 La máquina virtual de Ethereum es el corazón de Ethereum, es el sistema operativo de la cadena de bloques y donde ocurre todo el trabajo pesado, cada vez que se ejecuta un método de un contrato inteligente, el EVM crea un entorno virtual donde suceden todas las instrucciones dentro de ese método. Este entorno virtual captura el estado actual de la cadena de bloques y proporciona un resultado seguro y determinista. Dado el mismo estado y entradas, se obtiene el mismo resultado. El contrato inteligente puede leer datos de la cadena de bloques y también interactuar con otros contratos inteligentes. Los cambios realizados en el estado de la cadena de bloques se registran y se incluyen en una transacción. Esta transacción se transmite a la red y, una vez que se confirma la transacción, se crea un nuevo estado de cadena de bloques. Ese nuevo estado se convierte en el estado actual.
 
-### **¿Qué es Solidity? **
+### **¿Qué es solidity?**
 
 Solidity es un lenguaje de programación de alto nivel y orientado a objetos que se usa para crear y ejecutar contratos inteligentes en la red blockchain de Ethereum. Un contrato inteligente es un programa que define y ejecuta las reglas de un acuerdo entre dos o más partes, sin necesidad de intermediarios ni de confianza. Solidity tiene una sintaxis similar a la de C++, Python y JavaScript, y está diseñado para interactuar con la Máquina Virtual de Ethereum (EVM), que es el motor que procesa y almacena las transacciones y los estados de la blockchain.
 
@@ -516,13 +516,13 @@ El estándar ERC-721 es un conjunto de reglas y pautas para crear tokens no fung
 
 El estándar ERC-721 ha sentado las bases para el desarrollo de una amplia variedad de aplicaciones y plataformas basadas en NFT, desde mercados de arte digital hasta juegos blockchain y más. Los NFTs han revolucionado la forma en que percibimos y valoramos la propiedad digital, y continúan siendo una parte emocionante y en evolución del espacio blockchain.
 
-### **¿Que es [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)?** 
-
+### **¿Qué es OpenZeppelin?** 
+[OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)
 OpenZeppelin es una biblioteca de contratos inteligentes de código abierto y ampliamente utilizada en la comunidad de Ethereum y otras cadenas de bloques. La biblioteca está diseñada para facilitar el desarrollo seguro y eficiente de contratos inteligentes al proporcionar implementaciones pre-auditadas y probadas para una variedad de estándares y patrones comunes en la industria de las criptomonedas y blockchain.
 
 Para utilizar OpenZeppelin en tus propios contratos, puedes importar los contratos de la biblioteca en tus archivos Solidity. Esto te permite aprovechar las implementaciones seguras y probadas sin tener que escribir todo el código desde cero. Por ejemplo, si deseas crear un token ERC-20 o una coleccion NFT ERC-721, puedes importar el contrato `ERC20.sol`o `ERC721.sol` de OpenZeppelin y personalizarlo según tus necesidades.
 
-### **Compilación, despliegue e interacción de smart contract TokenERC20 y NFTs ERC721**
+### **Compilación, despliegue e interacción de contratos ERC20 y ERC721**
 
 ####  **Creación de un Token ERC-20 con OpenZeppelin**
 
