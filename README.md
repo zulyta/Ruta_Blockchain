@@ -366,7 +366,7 @@ Las variables son contenedores que almacenan valores que se pueden usar o modifi
 
 Esta tabla solo presenta algunos de los tipos de datos más comunes, Solidity también tiene otros tipos y características que pueden ser utilizados en la creación de contratos inteligentes.
 
-#### Mapping en Solidity
+### Mapping en Solidity
 
 Sin embargo, en Solidity debemos definir los tipos de datos a usar dentro del `mapping`. Dado que para este ejemplo estamos usando un tipo de dato `string` para la llave y un tipo de dato `uint256` para el valor asociado a esa llave, hacemos lo siguiente. Veamos:
 
@@ -440,7 +440,7 @@ contract registroNotas {
 
 
 ```
-#### Double Mapping o mapping anidados
+### Double Mapping o mapping anidado
 
 La estructura de datos `mapping` tambien puede tener otro `mapping` anidado. Ello permite guardar información más compleja. Un `mapping` anidado se asemeja mucho a una matriz de información o a una tabla de doble entrada. Es decir, dos valores (una fila y una columna) apuntarían a un tercer valor. Se crearía una coordenada (`x` `y`) con un valor `z` en dicha coordenada.
 
@@ -482,7 +482,7 @@ contract registroNotas {
 }
 ```
 
-#### Excepciones (errores)
+### Excepciones (errores)
 
 En Solidity, las excepciones (errores) se manejan mediante el uso de las sentencias `require`, `assert` y `revert`, estas sentencias se utilizan para verificar condiciones y lanzar excepciones si esas condiciones no se cumplen. 
 
@@ -515,7 +515,7 @@ La función `eliminarNota` recibe los nombres del estudiante `_alumno` y la mate
 
 Recuerda que el manejo adecuado de excepciones es esencial para garantizar la seguridad y la integridad de los contratos inteligentes. Cada excepción lanzada revierte la transacción, deshaciendo cualquier cambio en el estado del contrato y devolviendo cualquier ether que se haya gastado en la transacción.
 
-#### Eventos
+### Eventos
 
 Los eventos son una característica clave en Solidity y Ethereum que permiten a los contratos comunicarse con el mundo exterior, son útiles para notificar a las aplicaciones cliente sobre ciertos eventos ocurridos en el contrato, como cambios en el estado o transacciones importantes, estos eventos se registran en la cadena de bloques y pueden ser escuchados por las aplicaciones externas para tomar medidas en consecuencia.
 
@@ -543,7 +543,7 @@ function registrarNota(string memory _alumno, uint256 _nota) public {
 
 Los eventos son útiles para mantener a las aplicaciones actualizadas sobre los cambios importantes en el contrato sin necesidad de consultar activamente el estado del contrato en cada transacción, esto es especialmente útil para la comunicación entre contratos y aplicaciones de frontend.
 
-#### Constructor
+### Constructor
 
 Es una función especial que se ejecuta solo una vez cuando se despliega un contrato en la cadena de bloques, su propósito principal es inicializar el estado del contrato y configurar cualquier valor necesario. 
 
@@ -570,7 +570,7 @@ El constructor se define utilizando la palabra clave `constructor`, en este caso
 
 Se ejecuta solo una vez al desplegar el contrato, mientras que la función **cambiarMensaje** se puede llamar múltiples veces después de que el contrato esté desplegado.
 
-#### Struct
+### Struct
 
 Un `struct` en Solidity es una forma de definir un tipo de dato personalizado que puede contener múltiples campos diferentes. Funciona de manera similar a una estructura en otros lenguajes de programación. Un `struct` te permite agrupar varios valores relacionados en una sola entidad, lo que puede ser útil para organizar y manejar datos más complejos en tus contratos inteligentes.
 
