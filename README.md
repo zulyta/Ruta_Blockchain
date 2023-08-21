@@ -18,10 +18,13 @@
 - [¿Qué es Solidity?](#qué-es-solidity)
 - [Estructura básica de un contrato en Solidity](#estructura-básica-de-un-contrato-en-solidity)
 - [Variables y tipos de datos en Solidity](#variables-y-tipos-de-datos-en-solidity)
+
+#### **Día 3: Implementación de Contratos ERC20**
+
 - [Introducción al estándar ERC-20 para tokens fungibles](#introducción-al-estándar-erc-20-para-tokens-fungibles)
 - [Programación, despliegue e interacción con un token personalizado (ERC-20)](#programación-despliegue-e-interacción-con-un-token-personalizado-erc-20)
 
-#### **Día 3: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
+#### **Extra: Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
 - [Concepto de tokens no fungibles (NFTs) y el estándar ERC-721](#concepto-de-tokens-no-fungibles-nfts-y-el-estándar-erc-721)
 - [¿Qué es OpenZeppelin?](#qué-es-openzeppelin)
@@ -221,7 +224,7 @@ contract MiPrimerContrato {
 
 - [ ] Confirma la transacción en Metamask.
 
-   ![6](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815100421312.png)
+   
 
 **6. Interactuando con el Smart Contract**
 
@@ -230,8 +233,8 @@ contract MiPrimerContrato {
 2. Utiliza la función `set` para cambiar el valor del saludo. Ingresa un nuevo saludo en el campo de texto y haz clic en "transact".
 
 3. Utiliza la función `get` para recuperar el saludo almacenado.
- 
-Has creado y desplegado exitosamente tu primer smart contract utilizando Solidity en Remix. Ahora puedes explorar más sobre Solidity y la programación de contratos inteligentes. Recuerda que este tutorial es solo un punto de partida, y hay mucho más por aprender en el mundo de la tecnología blockchain.
+
+
 
 ## **Dia 2.** **Introducción a Solidity, Desarrollo de Contratos Simples**
 
@@ -240,6 +243,34 @@ Has creado y desplegado exitosamente tu primer smart contract utilizando Solidit
 Ethereum es una plataforma blockchain que permite crear y ejecutar contratos inteligentes y aplicaciones descentralizadas (dApps) para diversos fines. Ethereum tiene su propia criptomoneda nativa, el ether (ETH), que se usa para pagar las transacciones y los servicios en la red. Ethereum también tiene su propio lenguaje de programación, llamado Solidity, que se usa para escribir los contratos inteligentes y las dApps.
 
 La máquina virtual de Ethereum es el corazón de Ethereum, es el sistema operativo de la cadena de bloques y donde ocurre todo el trabajo pesado, cada vez que se ejecuta un método de un contrato inteligente, el EVM crea un entorno virtual donde suceden todas las instrucciones dentro de ese método. Este entorno virtual captura el estado actual de la cadena de bloques y proporciona un resultado seguro y determinista. Dado el mismo estado y entradas, se obtiene el mismo resultado. El contrato inteligente puede leer datos de la cadena de bloques y también interactuar con otros contratos inteligentes. Los cambios realizados en el estado de la cadena de bloques se registran y se incluyen en una transacción. Esta transacción se transmite a la red y, una vez que se confirma la transacción, se crea un nuevo estado de cadena de bloques. Ese nuevo estado se convierte en el estado actual.
+
+- #### Cuentas
+
+  Hay dos tipos de cuentas en Ethereum que comparten el mismo espacio de dirección: **Cuentas externas** que están controladas por un par de claves pública-privada (p-ej.: humanos) y **Cuentas contrato** que están controladas por el código almacenado conjuntamente con la cuenta.
+
+  La dirección de una cuenta externa viene determinada por la clave pública mientras que la dirección de la cuenta contrato se define en el momento en que se crea dicho contrato (se deriva de la dirección del creador y del número de transacciones enviadas desde esa dirección, el llamado “nonce”).
+
+  Independientemente de que la cuenta almacene código, los dos tipos se tratan de forma equitativa por la EVM.
+
+  Cada cuenta tiene un almacenamiento persistente clave-valor que mapea palabras de 256 bits a palabras de 256 bits llamado **almacenamiento**.
+
+  Además, cada cuenta tiene un **balance** en Ether (en “Wei” para ser exactos) que puede ser modificado enviando transacciones que incluyen Ether.
+
+- #### Transacciones
+
+  Una transacción es un mensaje que se envía de una cuenta a otra (que debería ser la misma o la especial cuenta-cero, ver más adelante). Puede incluir datos binarios (payload) y Ether.
+
+  Si la cuenta destino contiene código, este es ejecutado y el payload se provee como dato de entrada.
+
+  Si la cuenta destino es la cuenta-cero (la cuenta con dirección `0`), la transacción crea un **nuevo contrato**. Como se ha mencionado, la dirección del contrato no es la dirección cero, sino de una dirección derivada del emisor y su número de transacciones enviadas (el “nonce”). Los datos binarios de la transacción que crea el contrato son obtenidos como bytecode por la EVM y ejecutados. La salida de esta ejecución es permanentemente almacenada como el código del contrato. Esto significa que para crear un contrato, no se envía el código actual del contrato, realmente se envía código que nos devuelve ese código final.
+
+- #### Gas
+
+  En cuanto se crean, cada transacción se carga con una determinada cantidad de **gas**, cuyo propósito es limitar la cantidad de trabajo que se necesita para ejecutar la transacción y pagar por esta ejecución. Mientras la EVM ejecuta la transacción, el gas se gasta gradualmente según unas reglas específicas.
+
+  El **precio del gas** (gas price) es un valor establecido por el creador de la transacción, quien tiene que pagar el `gas_price * gas` desde la cuenta de envío. Si queda algo de gas después de la ejecución, se le reembolsa.
+
+  Si se ha gastado todo el gas en un punto (p.ej.: es negativo), se lanza una excepción de out-of-gas, que revierte todas las modificaciones hechas al estado en el contexto de la ejecución actual.
 
 ### **¿Qué es solidity?**
 
@@ -335,6 +366,301 @@ Las variables son contenedores que almacenan valores que se pueden usar o modifi
 
 Esta tabla solo presenta algunos de los tipos de datos más comunes, Solidity también tiene otros tipos y características que pueden ser utilizados en la creación de contratos inteligentes.
 
+#### Mapping en Solidity
+
+Sin embargo, en Solidity debemos definir los tipos de datos a usar dentro del `mapping`. Dado que para este ejemplo estamos usando un tipo de dato `string` para la llave y un tipo de dato `uint256` para el valor asociado a esa llave, hacemos lo siguiente. Veamos:
+
+```solidity
+mapping(string alumno => uint256 nota) public calificacion;
+calificacion["alumno"] = 12;
+```
+
+El tipo de dato `mapping` en solidity es una de las estructuras de datos más usados en Solidity. Podemos definirlo de manera genérica del siguiente modo:
+
+```sol
+mapping(KeyType => ValueType) mappingName;
+```
+
+Los tipos de data para llave y su valor asociado son definidos de antemano.
+
+**Tipos de datos para llave y su valor**
+
+Veamos la lista de tipos de dato tanto para las llaves como para los valores asociados a cada llave:
+
+| Types                     | Key Type | Value Type |
+| ------------------------- | -------- | ---------- |
+| boolean (bool)            | ✅        | ✅          |
+| integer (uint256)         | ✅        | ✅          |
+| unsigned integer (int256) | ✅        | ✅          |
+| address                   | ✅        | ✅          |
+| string                    | ✅        | ✅          |
+| enum                      | ✅        | ✅          |
+| bytes                     | ✅        | ✅          |
+| Contract                  | ✅        | ✅          |
+| mapping                   | ❌        | ✅          |
+| struct                    | ❌        | ✅          |
+| array types               | ❌        | ✅          |
+
+El tipo de dato para las llaves son más limitadas. Sin embargo, para el valor de las llaves puede tomar cualquier tipo de datos.
+
+**Getter automático**
+
+En la definición de un `mapping` se puede incluir un modificador de su visibilidad de la siguiente manera:
+
+```solidity
+mapping(string => string) public diccionario;
+```
+
+Al incluir el visibilizador de `public`, Solidity crea automáticamente un método para obtener información del `mapping`. Es decir, Solidity creará un `getter`. El argumento de este método `getter` será la llave del mapping y el valor de retorno será el valor asociado a dicha llave.
+
+**Ejemplo básico**, se crea un contrato inteligente en Solidity que permita a un docente registrar y consultar las calificaciones de los estudiantes en diferentes materias, se utiliza un mapeo para asociar los nombres de los estudiantes con sus calificaciones en las materias.
+
+1. El contrato `RegistroNotas` utilizará un mapeo llamado `calificaciones`. Este mapeo relacionará los nombres de los estudiantes (tipo `string`) con las calificaciones en diferentes materias (tipo `uint256`).
+2. La función `registrarCalificacion` permitirá al docente registrar la calificación de un estudiante. Tomará dos argumentos: `_nombre` que representa el nombre del estudiante y `_calificacion` que representa la calificación que el docente desea registrar. La función asignará esta calificación al mapeo `calificaciones` utilizando el nombre del estudiante como clave.
+3. La función `obtenerCalificacion` permitirá a los estudiantes consultar sus propias calificaciones. Tomará un argumento `_nombre` que representa el nombre del estudiante. La función devolverá la calificación que se encuentra en el mapeo `calificaciones` para el nombre del estudiante ingresado.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract registroNotas {
+    // Mapeo de matrículas de estudiantes a materias
+    mapping(string alumno => uint256 nota) calificaciones;
+
+    // Función para matricular un estudiante en una materia
+    function registrarNota(string memory _alumno, uint256 _nota) public {
+        calificaciones[_alumno] = _nota;
+    }
+
+    // Función para obtener las materias en las que un estudiante está matriculado
+    function obtenerNota(string memory _alumno) public view returns (uint256) {
+        return calificaciones[_alumno];
+    }
+}
+
+
+```
+#### Double Mapping o mapping anidados
+
+La estructura de datos `mapping` tambien puede tener otro `mapping` anidado. Ello permite guardar información más compleja. Un `mapping` anidado se asemeja mucho a una matriz de información o a una tabla de doble entrada. Es decir, dos valores (una fila y una columna) apuntarían a un tercer valor. Se crearía una coordenada (`x` `y`) con un valor `z` en dicha coordenada.
+
+Ejemplo: En un salón de clases el profesor quiere llevar un registro de las notas de cada una de las materias de sus alumnos. Se da cuenta que tiene una lista alumnos y cada alumno tiene una lista de diferentes materias. Además, cada materia tiene diferente nota. Entonces aquí hay tres valores que registrar:
+
+- El nombre de cada alumno (supongamos que el nombre está representado por el tipo de dato `string`)
+- Las materias por cada alumno
+- Las notas por cada materia
+
+Podemos crear una matriz como la siguiente:
+
+|               | Historia | Lengua | Matematica | Geografia |
+| ------------- | -------- | ------ | ---------- | --------- |
+| Juan (0x01)   | 20       | 20     | 20         | 20        |
+| Maria (0x02)  | 20       | 20     | 20         | 20        |
+| Carlos (0x03) | 20       | 20     | 20         | 20        |
+| Sara (0x04)   | 20       | 20     | 20         | 20        |
+
+A cada nota le corresponde dos coordenadas: el nombre del alumno y una materia. Veamos como implementar esto en Solidity:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract registroNotas {
+    // Mapeo de matrículas de estudiantes a materias
+    mapping (string alumno => mapping (string materia => uint256 nota)) calificacionesxMateria;
+
+    // Función para matricular un estudiante en una materia
+    function registrarMateNotas(string memory _alumno, string memory _materia, uint256 nota) public {
+        calificacionesxMateria[_alumno][_materia]=nota;
+    }
+	
+    // Función para obtener las materias en las que un estudiante está matriculado
+    
+    function obtenerMateNotas(string memory _alumno, string memory _materia) public view returns (uint256){
+        return calificacionesxMateria[_alumno][_materia];
+    }
+}
+```
+
+#### Excepciones (errores)
+
+En Solidity, las excepciones (errores) se manejan mediante el uso de las sentencias `require`, `assert` y `revert`, estas sentencias se utilizan para verificar condiciones y lanzar excepciones si esas condiciones no se cumplen. 
+
+**Sentencia `require`**: La sentencia `require` se utiliza para verificar condiciones y revertir la transacción si la condición no se cumple. Es útil para validar entradas o condiciones antes de realizar cambios en el estado del contrato.
+
+```solidity
+function registrarNota(string memory _alumno, uint256 _nota) public {
+        require(_nota >= 0 && _nota <= 20, "Nota debe ser mayor a 0 y menor a 20");
+        calificacionesxAlumno[_alumno] = _nota;
+ }
+```
+
+En este ejemplo, si `b` es igual a cero, la transacción se revertirá y el mensaje de error "El divisor no puede ser cero." se mostrará.
+
+**Sentencia `revert`**
+
+La sentencia `revert` se utiliza para revertir una transacción y proporcionar un mensaje de error personalizado.
+
+```solidity
+// Función para eliminar una calificación de una materia
+    function eliminarNota(string memory _alumno, string memory _materia) public {
+        if (calificacionesxMateria[_alumno][_materia] == 0) {
+            revert("No existe una calificacion para esta materia");
+        }
+        calificacionesxMateria[_alumno][_materia] = 0;
+    }
+```
+
+La función `eliminarNota` recibe los nombres del estudiante `_alumno` y la materia `_materia`, luego verifica si ya hay una calificación registrada para esa materia y estudiante. Si no hay calificación, la función utiliza `revert` para cancelar la transacción y mostrar un mensaje de error. Si existe una calificación, la función establece la calificación en cero, eliminando así la calificación previa para esa materia y estudiante.
+
+Recuerda que el manejo adecuado de excepciones es esencial para garantizar la seguridad y la integridad de los contratos inteligentes. Cada excepción lanzada revierte la transacción, deshaciendo cualquier cambio en el estado del contrato y devolviendo cualquier ether que se haya gastado en la transacción.
+
+#### Eventos
+
+Los eventos son una característica clave en Solidity y Ethereum que permiten a los contratos comunicarse con el mundo exterior, son útiles para notificar a las aplicaciones cliente sobre ciertos eventos ocurridos en el contrato, como cambios en el estado o transacciones importantes, estos eventos se registran en la cadena de bloques y pueden ser escuchados por las aplicaciones externas para tomar medidas en consecuencia.
+
+**Definición de un Evento**
+
+​	 Para definir un evento en Solidity, debes declararlo en el contrato. Un evento se parece a 	una función, pero se utiliza la palabra clave `event` en lugar de `function`.
+
+```solidity
+// Declaración de un evento
+event NotaRegistrada(string alumno, uint256 nota);
+```
+
+**Emisión de Eventos**
+
+​	 Dentro de las funciones de tu contrato, puedes emitir un evento utilizando la palabra clave 	`emit` seguida del nombre del evento y los valores que deseas registrar.
+
+```solidity
+function registrarNota(string memory _alumno, uint256 _nota) public {
+        require(_nota > 0 && _nota <= 20, "Nota debe estar entre 1 y 20");
+        calificacionesxAlumno[_alumno] = _nota;
+        
+        emit NotaRegistrada(_alumno, _nota);
+    }
+```
+
+Los eventos son útiles para mantener a las aplicaciones actualizadas sobre los cambios importantes en el contrato sin necesidad de consultar activamente el estado del contrato en cada transacción, esto es especialmente útil para la comunicación entre contratos y aplicaciones de frontend.
+
+#### Constructor
+
+Es una función especial que se ejecuta solo una vez cuando se despliega un contrato en la cadena de bloques, su propósito principal es inicializar el estado del contrato y configurar cualquier valor necesario. 
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract MiContrato {
+    string public mensaje;
+
+    // Constructor: se ejecuta al desplegar el contrato
+    constructor(string memory _initialMessage) {
+        mensaje = _initialMessage;
+    }
+
+    // Función para cambiar el mensaje
+    function cambiarMensaje(string memory _newMessage) public {
+        mensaje = _newMessage;
+    }
+}
+```
+
+El constructor se define utilizando la palabra clave `constructor`, en este caso, el constructor toma un argumento de tipo cadena de texto (`_initialMessage`) y establece el valor de `mensaje` con este valor inicial. 
+
+Se ejecuta solo una vez al desplegar el contrato, mientras que la función **cambiarMensaje** se puede llamar múltiples veces después de que el contrato esté desplegado.
+
+#### Struct
+
+Un `struct` en Solidity es una forma de definir un tipo de dato personalizado que puede contener múltiples campos diferentes. Funciona de manera similar a una estructura en otros lenguajes de programación. Un `struct` te permite agrupar varios valores relacionados en una sola entidad, lo que puede ser útil para organizar y manejar datos más complejos en tus contratos inteligentes.
+
+```solidity
+  // SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract RegistroNotas {
+    // Mapeo de matrículas de estudiantes a materias
+    struct Calificacion {
+        string alumno;
+        string materia;
+        uint256 nota;
+        bool existe;
+    }
+
+```
+
+Los `structs` son especialmente útiles cuando tienes tipos de datos más complejos que necesitas manejar en tu contrato, como registros de usuarios, detalles de productos u otras estructuras de datos. 
+
+  **Ejemplo basico**
+
+El ejercicio consiste en desarrollar un contrato inteligente en el lenguaje de programación Solidity para gestionar el registro de calificaciones académicas de estudiantes en distintas materias. El contrato, llamado `RegistroNotas`, emplea un struct denominado `Calificacion` para almacenar información relevante sobre cada calificación, como el nombre del alumno, el nombre de la materia, la nota asignada y un indicador de existencia.
+
+El contrato presenta las siguientes características y funcionalidades:
+
+- **struct `Calificacion`**
+  - Almacena información sobre el alumno, la materia, la nota y la existencia de la calificación. Esto permite una gestión organizada y detallada de las calificaciones registradas.
+- **Mapping**
+  - Utiliza un mapeo que asocia cada alumno con las materias en las que está registrado y las correspondientes calificaciones. Esto permite un acceso eficiente a las calificaciones por parte de los usuarios.
+- **Evento `CalificacionRegistrada`**: Se emite un evento cada vez que se registra una nueva calificación. Este evento permite a los usuarios y aplicaciones externas ser notificados sobre las actualizaciones en las calificaciones.
+- **Constructor**
+  -  El contrato implementa un modificador llamado `soloAdministrador`, que restringe el acceso a ciertas funciones solamente al administrador del contrato.
+- **Funciones Principales**:
+  - `registrarMateNotas()`: Permite al administrador registrar la calificación de un alumno en una materia específica, verifica que la nota esté en el rango válido (0 a 20) y emite un evento para notificar la nueva calificación.
+  - `obtenerMateNotas()`: Permite a cualquiera consultar la calificación de un alumno en una materia específica.
+  - `eliminarCalificacion()`: Permite al administrador eliminar una calificación previamente registrada en una materia.
+- **Rol de Administrador**: El constructor asigna automáticamente el rol de administrador al creador del contrato, quien tiene acceso exclusivo a ciertas funciones, lo que mejora la seguridad y el control del contrato.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract RegistroNotas {
+    
+    struct Calificacion {
+        uint256 nota;
+        bool existe;
+    }
+  // Mapeo de estudiantes
+mapping(string => mapping(string => Calificacion)) calificacionesPorMateria;
+
+// Evento para registrar una nueva calificación
+event CalificacionRegistrada(string alumno, string materia, uint256 calificacion);
+
+// Definición del rol de administrador
+address public administrador;
+
+constructor() {
+    administrador = msg.sender;  // El creador del contrato se asigna como administrador
+}
+
+// Función para registrar calificaciones
+function registrarMateNotas(string memory _alumno, string memory _materia, uint256 _nota) public {
+    require(_nota >= 0 && _nota <= 20, "La nota debe estar entre 0 y 20");
+    calificacionesPorMateria[_alumno][_materia] = Calificacion(_nota, true);
+
+    emit CalificacionRegistrada(_alumno, _materia, _nota);
+}
+
+// Función para obtener notas por nombre y materia
+function obtenerMateNotas(string memory _alumno, string memory _materia) public view returns (uint256) {
+    return calificacionesPorMateria[_alumno][_materia].nota;
+}
+
+// Función para eliminar una calificación de una materia
+function eliminarCalificacion(string memory _alumno, string memory _materia) public {
+    if (!calificacionesPorMateria[_alumno][_materia].existe) {
+        revert("No existe una calificacion para esta materia");
+    }
+    delete calificacionesPorMateria[_alumno][_materia];
+}
+}
+```
+
+
+
+
+## **Dia 3. Implementación de Contratos ERC20**
+
 ### **Introducción al estándar ERC-20 para tokens fungibles**
 
 Los tokens fungibles son activos digitales idénticos e intercambiables entre sí, ya que cada uno tiene el mismo valor y características. Estos tokens permiten la creación de mercados líquidos y son ampliamente utilizados en diversas aplicaciones, como monedas digitales, representación de activos y programas de recompensas.
@@ -345,20 +671,45 @@ El estándar ERC-20 (Ethereum Request for Comment 20) es una interfaz técnica q
 
 El estándar ERC-20 establece varias funciones clave que deben estar presentes en cualquier contrato que cumpla con el estándar.
 
-**Métodos Clave ERC-20**
+**Getters**
 
 - `balanceOf(address _owner) external view returns (uint256)`: Devuelve el saldo de tokens de una dirección específica.
 - `totalSupply() external view returns (uint256)`: Devuelve el suministro total de tokens en circulación.
-- `transfer(address _to, uint256 _value) external returns (bool)`: Transfiere una cantidad de tokens desde la dirección del remitente a otra dirección.
-- `transferFrom(address _from, address _to, uint256 _value) external returns (bool)`: Transfiere una cantidad de tokens desde una dirección específica a otra dirección en nombre del remitente (si se tienen los permisos adecuados).
-- `approve(address _spender, uint256 _value) external returns (bool)`: Otorga permiso a una dirección (el "gastador") para gastar una cantidad específica de tokens en nombre del propietario.
 - `allowance(address _owner, address _spender) external view returns (uint256)`: Devuelve la cantidad de tokens que el gastador está autorizado a gastar en nombre del propietario.
+
+**Setters**
+
+- `transfer(address _to, uint256 _value) external returns (bool)`: Transfiere una cantidad de tokens desde la dirección del remitente a otra dirección.
+
+- `transferFrom(address _from, address _to, uint256 _value) external returns (bool)`: Transfiere una cantidad de tokens desde una dirección específica a otra dirección en nombre del remitente (si se tienen los permisos adecuados).
+
+- `approve(address _spender, uint256 _value) external returns (bool)`: Otorga permiso a una dirección (el "gastador") para gastar una cantidad específica de tokens en nombre del propietario.
+
+  
 
 ### **Programación, despliegue e interacción con un token personalizado (ERC-20)**
 
 Para crear un contrato de token ERC-20 básico, es esencial definir las variables necesarias, como `name` (nombre del token), `symbol` (símbolo del token), `decimals` (cantidad de decimales para la representación), y `totalSupply` (suministro total de tokens). Luego, se implementan las funciones requeridas por el estándar, como `transfer` y `balanceOf`.
 
 #####   **Creando un Token ERC-20 Básico**
+
+**Información del Token:**
+
+1. `name()`: Devuelve el nombre del token, en este caso "MiPrimerToken".
+2. `symbol()`: Devuelve el símbolo del token, en este caso "MTK".
+3. `decimals()`: Devuelve la cantidad de decimales utilizados por el token, en este caso 18.
+
+**Getters**
+
+- `getTotalSupply()`: Devuelve la cantidad total de tokens acuñados y disponibles en circulación.
+- `allowance(address owner, address spender)`: Devuelve la cantidad de tokens que el propietario (`owner`) ha permitido que el gastador (`spender`) gaste en su nombre.
+- `balanceOf(address _billetera)`: Devuelve el saldo de tokens en una billetera específica (`_billetera`).
+
+**Setters** 
+
+-  `transfer(address _to, uint256 _amount)`: Permite transferir tokens desde la cuenta del remitente al destinatario (`_to`) en una cantidad específica (`_amount`).
+- `approve(address _spender, uint256 _amount)`: Permite al propietario aprobar a un gastador (`_spender`) gastar una cierta cantidad de tokens en su nombre.
+- `transferFrom(address _from, address _to, uint256 _amount)`: Permite al gastador (`msg.sender`) transferir tokens de la cuenta de un propietario (`_from`) a otra cuenta (`_to`) en una cantidad específica (`_amount`), siempre y cuando el gastador tenga permiso para hacerlo.
 
 **1.** **Abre Remix**
 
@@ -376,74 +727,78 @@ Para crear un contrato de token ERC-20 básico, es esencial definir las variable
 pragma solidity 0.8.18;
 
 contract TokenERC20 {
-    string public name = "Mi Token ERC-20";
-    string public symbol = "MTK";
-    uint8 public decimals = 18;
     uint256 public totalSupply;
+    mapping(address => uint256) private _balances;
+    mapping(address => mapping(address => uint256)) private _allowances;
 
-    mapping(address => uint256) public balanceOf;
-    mapping(address => mapping(address => uint256)) public allowance;
-
-    constructor(uint256 initialSupply) {
-        totalSupply = initialSupply * 10 ** uint256(decimals);
-        balanceOf[msg.sender] = totalSupply;
+    // 1 - name: me devuelve el nombre del token
+    //    - argumento: no
+    function name() public pure returns (string memory) {
+        return "MiPrimerToken";
     }
 
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    event Approval(address indexed owner, address indexed spender, uint256 value);
+    // 2 - symbol: me devuelve el símbolo del token
+    //    - argumento: no
+    function symbol() public pure returns (string memory) {
+        return "MTK";
+    }
 
-    function transfer(address to, uint256 value) public returns (bool success) {
-        require(to != address(0), "No se puede transferir a la direccion cero");
-        require(balanceOf[msg.sender] >= value, "Saldo insuficiente");
+    // 3 - decimals: me devuelve la cantidad de decimales
+    //    - argumento: no
+    function decimals() public pure returns (uint256) {
+        return 18;
+    }
 
-        balanceOf[msg.sender] -= value;
-        balanceOf[to] += value;
-        emit Transfer(msg.sender, to, value);
+    // 4 - totalSupply: cantidad de tokens acuñados
+    //    - argumento: no
+    function getTotalSupply() public view returns (uint256) {
+        return totalSupply;
+    }
+
+    // 5 - allowance: indica la cantidad de permiso
+    //    - argumento: owner (address), spender (address)
+    function allowance(address owner, address spender) public view returns (uint256) {
+        return _allowances[owner][spender];
+    }
+
+    // 6 - balanceOf: cantidad de tokens de una billetera
+    //    - argumento: billetera (address)
+    function balanceOf(address _billetera) public view returns (uint256) {
+        return _balances[_billetera];
+    }
+
+    // 7 - transfer: transfiere tokens del que llama a una billetera destino
+    //    - argumento: to (address), amount (uint256)
+    function transfer(address _to, uint256 _amount) public {
+        require(_to != address(0), "Direccion invalida");
+        require(_balances[msg.sender] >= _amount, "Saldo insuficiente");
+
+        _balances[msg.sender] -= _amount;
+        _balances[_to] += _amount;
+    }
+
+    // 8 - approve: aprobar a un spender una cantidad de tokens a usarse
+    //    - argumento: spender (address), amount (uint256)
+    function approve(address _spender, uint256 _amount) public returns (bool) {
+        _allowances[msg.sender][_spender] = _amount;
         return true;
     }
 
-    function approve(address spender, uint256 value) public returns (bool success) {
-        allowance[msg.sender][spender] = value;
-        emit Approval(msg.sender, spender, value);
-        return true;
-    }
+    // 9 - transferFrom: enviar de una billetera origen a una billetera destino una cantidad de tokens
+    //    - argumento: from (address), to (address), amount (uint256)
+    function transferFrom(address _from, address _to, uint256 _amount) public {
+        require(_from != address(0), "Direccion invalida");
+        require(_to != address(0), "Direccion invalida");
+        require(_balances[_from] >= _amount, "Saldo insuficiente");
+        require(_allowances[_from][msg.sender] >= _amount, "Permiso insuficiente");
 
-    function transferFrom(address from, address to, uint256 value) public returns (bool success) {
-        require(to != address(0), "No se puede transferir a la direccion cero");
-        require(balanceOf[from] >= value, "Saldo insuficiente");
-        require(allowance[from][msg.sender] >= value, "Permisos insuficientes");
-
-        balanceOf[from] -= value;
-        balanceOf[to] += value;
-        allowance[from][msg.sender] -= value;
-        emit Transfer(from, to, value);
-        return true;
+        _balances[_from] -= _amount;
+        _balances[_to] += _amount;
+        _allowances[_from][msg.sender] -= _amount;
     }
 }
 
 ```
-
-**Método `transfer(address to, uint256 value)`**
-
-Este método se utiliza para transferir tokens de la cuenta del remitente a otra dirección. Veamos cómo funciona:
-
-- `address to`: La dirección a la que se transferirán los tokens.
-- `uint256 value`: La cantidad de tokens a transferir.
-
-**Método `approve(address spender, uint256 value)`**
-
-Este método se utiliza para otorgar permiso a otra dirección (spender) para gastar una cantidad específica de tokens en nombre del propietario. Veamos cómo funciona:
-
-- `address spender`: La dirección que recibirá el permiso.
-- `uint256 value`: La cantidad de tokens que se aprueban para gastar.
-
-**Método `transferFrom(address from, address to, uint256 value)`**
-
-Este método se utiliza para transferir tokens de una dirección (`from`) a otra dirección (`to`) en nombre del remitente, siempre que el remitente tenga permiso para hacerlo. Veamos cómo funciona:
-
-- `address from`: La dirección desde la que se transferirán los tokens.
-- `address to`: La dirección a la que se transferirán los tokens.
-- `uint256 value`: La cantidad de tokens a transferir.
 
 **4.  Compilar el Contrato**
 
@@ -453,48 +808,15 @@ Este método se utiliza para transferir tokens de una dirección (`from`) a otra
 
 **5. Desplegar el Contrato** 
 
-- [ ] Ve a la pestaña "Deploy & Run Transactions".
-- [ ] En "Environment", selecciona "Injected Provider" para desplegar el contrato en un entorno de prueba local.
-- [ ] En "Contract", selecciona "TokenERC20".
-- [ ] Ingresa un valor para "initialSupply" (por ejemplo, 10000).
-- [ ] Haz clic en "Deploy".
+- [ ] Cambia a la pestaña "Deploy & Run Transactions" (Desplegar y Ejecutar Transacciones) en Remix.
+- [ ] En el campo "Environment" (Entorno), selecciona "Injected Web3". Esto te permitirá interactuar con la billetera de tu navegador (por ejemplo, MetaMask) para desplegar el contrato.
 
-Después de escribir y desplegar un contrato de token ERC-20, los usuarios pueden interactuar con él mediante transacciones en la blockchain. Pueden consultar su saldo utilizando la función `balanceOf`, transferir tokens a otras direcciones utilizando la función `transfer`, otorgar permisos de gasto a otras direcciones utilizando `approve`, y realizar transferencias autorizadas utilizando `transferFrom`.
+- [ ] En el campo "Account" (Cuenta), elige la cuenta de MetaMask desde la cual deseas realizar el despliegue y haz clic en el botón "Deploy" (Desplegar) para iniciar el proceso de despliegue.
+- [ ] MetaMask mostrará una ventana emergente con los detalles de la transacción, confirma la transacción y ajusta las tarifas de gas si es necesario.
+- [ ] Después de confirmar la transacción, deberás esperar a que la transacción sea minada en la cadena de bloques. Puede tomar algunos momentos.
+- [ ] Una vez que la transacción se confirme y el contrato esté desplegado, podrás interactuar con él a través de las funciones disponibles en la pestaña "Deploy & Run Transactions".
 
-**6. Interactuando con el Token ERC-20**
-
-**Transferir Tokens**
-
-- [ ] En la pestaña "Deployed Contracts", verás el contrato TokenERC20 desplegado.
-- [ ] En la sección "write", selecciona "transfer".
-- [ ] Ingresa la dirección a la que deseas transferir tokens en "to".
-- [ ] Ingresa la cantidad de tokens que deseas transferir en "value".
-- [ ] Haz clic en "transact".
-
-**Verificar el Saldo**
-
-- [ ] En la sección "read", selecciona "balanceOf".
-- [ ] Ingresa la dirección para la cual deseas verificar el saldo en "who".
-- [ ] Haz clic en "call".
-
-**Aprobación (approve)**
-
-- [ ] En la sección "write", selecciona "approve".
-- [ ] Ingresa la dirección del beneficiario (spender) en "spender".
-- [ ] Ingresa la cantidad de tokens que deseas aprobar en "value".
-- [ ] Haz clic en "transact".
-
-**Transferencia Desde (transferFrom)**
-
-- [ ] En la sección "write", selecciona "transferFrom".
-- [ ] Ingresa la dirección del remitente (from) en "from".
-- [ ] Ingresa la dirección del destinatario (to) en "to".
-- [ ] Ingresa la cantidad de tokens que deseas transferir en "value".
-- [ ] Haz clic en "transact".
-
-![image-20230815181900217](C:\Users\ltico\AppData\Roaming\Typora\typora-user-images\image-20230815181900217.png)
-
-## **Dia 3. Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
+## **Extra. Implementación de Contratos ERC20 y ERC721 con OpenZeppelin**
 
 ### **Concepto de tokens no fungibles (NFTs) y el estándar ERC-721**
 
@@ -506,12 +828,17 @@ El estándar ERC-721 es un conjunto de reglas y pautas para crear tokens no fung
 
 **Métodos Clave en ERC-721**
 
+**Getters**
+
 - `balanceOf(address _owner) external view returns (uint256)`: Devuelve el número de NFTs que un propietario tiene.
 - `ownerOf(uint256 _tokenId) external view returns (address)`: Devuelve la dirección del propietario de un NFT específico.
-- `approve(address _approved, uint256 _tokenId) external`: Permite que otra dirección sea aprobada para transferir un NFT en particular.
-- `getApproved(uint256 _tokenId) external view returns (address)`: Devuelve la dirección aprobada para transferir un NFT.
-- `setApprovalForAll(address _operator, bool _approved) external`: Establece o revoca el permiso de un operador para transferir todos los NFTs de un propietario.
 - `isApprovedForAll(address _owner, address _operator) external view returns (bool)`: Verifica si un operador está aprobado para gestionar todos los NFTs de un propietario.
+- `getApproved(uint256 _tokenId) external view returns (address)`: Devuelve la dirección aprobada para transferir un NFT.
+
+**Setters**
+
+- `approve(address _approved, uint256 _tokenId) external`: Permite que otra dirección sea aprobada para transferir un NFT en particular.
+- `setApprovalForAll(address _operator, bool _approved) external`: Establece o revoca el permiso de un operador para transferir todos los NFTs de un propietario.
 - `transferFrom(address _from, address _to, uint256 _tokenId) external`: Transfiere un NFT de una dirección a otra.
 
 El estándar ERC-721 ha sentado las bases para el desarrollo de una amplia variedad de aplicaciones y plataformas basadas en NFT, desde mercados de arte digital hasta juegos blockchain y más. Los NFTs han revolucionado la forma en que percibimos y valoramos la propiedad digital, y continúan siendo una parte emocionante y en evolución del espacio blockchain.
